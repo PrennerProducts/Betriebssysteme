@@ -1,12 +1,11 @@
-
 # Name of the binary
-BINARY = myShell
+BINARY = matrix
 # Object files
-OBJS   = myShell.o
+OBJS   = matrix.o
 # Compiler flags
 CFLAGS = -Werror -Wall
 # Linker flags
-LFLAGS =
+LFLAGS = -pthread
 
 
 # all target: builds all important targets
