@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Betriebssysteme",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Betriebssysteme::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Betriebssysteme-Debug-d0194ef45325e03a14f2.json",
+					"name" : "Betriebssysteme",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/McRebel/Dropbox/MCI/3. Semester/Betriebssysteme/GitHub/Betriebssysteme/cmake-build-debug",
+		"source" : "C:/Users/McRebel/Dropbox/MCI/3. Semester/Betriebssysteme/GitHub/Betriebssysteme"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
