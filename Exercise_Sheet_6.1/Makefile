@@ -1,0 +1,58 @@
+
+# Name of the binary
+BINARY = printserver
+# Object files
+OBJS   = ${BINARY}.o
+# Compiler flags
+
+# Name of the binary
+BINARY2 = client
+# Object files
+OBJS2   = ${BINARY2}.o
+
+
+CFLAGS = -Werror -Wall
+# Linker flags
+LFLAGS = -rlt
+
+# all target: builds all important targets
+all: a b
+
+a: ${BINARY}
+# Links the binary
+${BINARY} : ${OBJS}
+	gcc ${LFLAGS} -o ${BINARY} ${OBJS}
+
+b: ${BINARY2}
+# Links the binary
+${BINARY2} : ${OBJS2}
+	gcc ${LFLAGS} -o ${BINARY2} ${OBJS2}
+
+# Compiles a source-file (any file with file extension .c) into an object-file
+#
+# "%" is a wildcard which matches every file-name (similar to * in regular expressions)
+# Such a rule is called a pattern rule (because it matches a pattern, see https://www.gnu.org/software/make/manual/html_node/Pattern-Rules.html),
+# which are a form of so called implicit rules (see https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html)
+# "$@" and "$<" are so called automatic variables (see https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+%.o : %.c
+	gcc -c ${CFLAGS} -o $@ $<
+
+
+
+
+# Rules can not only be used for compiling a program but also for executing a program
+
+print_run: ${BINARY}
+	./${BINARY}
+
+client_run: ${BINARY2}
+	./${BINARY2}
+
+
+# Delete all build artifacts
+clean :
+	rm -rf ${BINARY} ${OBJS}
+
+
+# all  and clean are a "phony" targets, meaning they are no files
+.PHONY : all clean
